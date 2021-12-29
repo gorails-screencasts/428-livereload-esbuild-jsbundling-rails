@@ -1,0 +1,36 @@
+<%= form_with(model: post) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= form.label :title, class: 'form-label' %>
+      <%= form.text_field :title, class: 'form-control' %>
+    </div>
+
+  <div class="mb-3">
+    <%= form.label :body, class: 'form-label' %>
+      <%= form.rich_text_area :body, class: 'form-control' %>
+    </div>
+
+  <div class="mb-3">
+    <%= form.button class: 'btn btn-primary' do %>
+      <span class="show-when-enabled">Create Post</span>
+      <span class="show-when-disabled">Processing...</span>
+    <% end %>
+
+    <% if post.persisted? %>
+      <%= link_to "Cancel", post, class: "btn btn-link" %>
+    <% else %>
+      <%= link_to "Cancel", posts_path, class: "btn btn-link" %>
+    <% end %>
+  </div>
+<% end %>

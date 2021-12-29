@@ -8,7 +8,8 @@ require("@rails/activestorage").start()
 //require("trix")
 //require("@rails/actiontext")
 require("local-time").start()
-require("@rails/ujs").start()
+window.Rails = require("@rails/ujs")
+window.Rails.start()
 
 import './channels/**/*_channel.js'
 import "./controllers"
@@ -27,3 +28,5 @@ document.addEventListener("turbo:load", () => {
 })
 import './channels/**/*_channel.js'
 import * as bootstrap from "bootstrap"
+import "trix"
+import "@rails/actiontext"

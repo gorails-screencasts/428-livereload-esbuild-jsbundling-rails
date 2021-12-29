@@ -5,6 +5,7 @@
     "@hotwired/stimulus": "^3.0.1",
     "@hotwired/turbo-rails": "^7.1.0",
     "@popperjs/core": "^2.11.0",
+    "@rails/actiontext": "^7.0.0",
     "@rails/activestorage": "^7.0.0",
     "@rails/request.js": "^0.0.6",
     "@rails/ujs": "^7.0.0",

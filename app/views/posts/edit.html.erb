@@ -1,0 +1,17 @@
+<div class="d-flex justify-content-between">
+  <h1>Edit Post</h1>
+
+  <div>
+    <%# Rails UJS %>
+    <%= link_to 'Destroy', @post, method: :delete, class: "text-danger", data: { confirm: 'Are you sure?' } %>
+    <%= button_to 'Destroy', @post, method: :delete, class: "btn btn-danger", data: { confirm: 'Are you sure?' } %>
+
+    <%# Turbo %>
+    <%= link_to 'Destroy', @post, class: "text-danger", data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
+    <%= button_to 'Destroy', @post, method: :delete, class: "btn btn-danger", form: { data: { turbo_confirm: 'Are you sure?' } } %>
+  </div>
+
+</div>
+
+
+<%= render 'form', post: @post %>

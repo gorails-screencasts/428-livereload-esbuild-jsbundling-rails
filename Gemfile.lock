@@ -321,7 +321,7 @@ DEPENDENCIES
   debug
   devise (~> 4.8, >= 4.8.0)
   friendly_id (~> 5.4)
-  image_processing
+  image_processing (~> 1.2)
   importmap-rails
   jbuilder
   jsbundling-rails

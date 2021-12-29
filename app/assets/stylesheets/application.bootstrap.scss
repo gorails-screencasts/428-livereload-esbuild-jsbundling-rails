@@ -1,2 +1,13 @@
 @import 'bootstrap/scss/bootstrap';
 @import "jumpstart/announcements";
+@import 'actiontext.css';
+
+button {
+  .show-when-enabled { display: initial; }
+  .show-when-disabled { display: none; }
+
+  &[disabled] {
+    .show-when-enabled { display: none; }
+    .show-when-disabled { display: initial; }
+  }
+}
