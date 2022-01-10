@@ -12,7 +12,7 @@ const entryPoints = [
 ]
 
 const watchDirectories = [
-  "./app/assets/stylesheets/**/*",
+  "./app/assets/builds/**/*.css", // Wait for cssbundling changes
   "./app/javascript/**/*",
   "./app/views/**/*"
 ]
